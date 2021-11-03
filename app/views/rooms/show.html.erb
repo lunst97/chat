@@ -1,0 +1,16 @@
+<h1>Room <%= @room.id %></h1>
+
+<%= link_to "Leave", root_path %>
+
+<p id="notice"><%= notice %></p>
+
+<div class="card contacts_card">
+  <div class="card-body msg_card_body" id="messages" data-room-id="<%= @room.id %>">
+    <%= render @room.messages %>
+  </div>
+  <div class="card-footer">
+    <div class="input">
+      <%= render 'messages/form' %>
+    </div>
+  </div>
+</div>

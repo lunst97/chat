@@ -1,0 +1,9 @@
+<div class="message mt-4">
+  <div class="nick">
+    <%= message.user.nickname %>
+  </div>
+  <div class="msg_cotainer">
+    <div><%= message.body %></div>
+    <span class="msg_time"> <%= message.created_at.strftime("%H:%M") %></span>
+  </div>
+</div>
