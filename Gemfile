@@ -8,6 +8,7 @@ gem 'puma', '~> 5.0'
 gem 'webpacker', '~> 5.0'
 gem 'faker'
 gem 'bootsnap'
+gem 'redis'
 
 group :development, :test do
   gem 'pry-rails'
