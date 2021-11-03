@@ -13,7 +13,6 @@ const createOnlineChannel = onlineId => {
     },
 
     received(data) {
-      $('#online').append(data['online'])
     }
   });
 }
