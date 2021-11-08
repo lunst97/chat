@@ -11,7 +11,7 @@ const createRoomChannel = roomId => {
     },
 
     received(data) {
-      $('#messages').append(data['message'])
+      c
       scroll();
     },
 

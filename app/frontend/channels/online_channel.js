@@ -1,18 +1,13 @@
 import consumer from "./consumer"
 
 let online = {};
-
-const createOnlineChannel = onlineId => {
-  online = consumer.subscriptions.create("OnlineChannel", {
-    connected() {
-
-    },
-
-    disconnected() {
-
-    },
-
-    received(data) {
-    }
-  });
-}
+$(document).on("turbolinks:load", function () {
+  const createOnlineChannel = onlineId => {
+    online = consumer.subscriptions.create("OnlineChannel", {
+      received(data) {
+        $('#online').empty();
+        $('#online').append(data['users']);
+      }
+    });
+  }
+});
