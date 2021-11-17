@@ -1,24 +1,29 @@
-# README
+# Чат на Ruby с использованием ActionCable
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby on Rails приложение и использованием технологий AplicationCable, кототое позволяет пользователем без регистрации подключаться к комнате, а так же её создавать и переписываться.
 
-Things you may want to cover:
+### Ссылка: https://chactlunst.herokuapp.com
 
-* Ruby version
+## Конфигурация:
 
-* System dependencies
+ * Rails version: 6.1.4
+ * Bootstrap 4
+ * Redis + redis gem
+ * PostgreSQL (для продакшена)
+ * 3 канала: Room, Status
+ * Язык: Русский
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Развертывание:
+ 1. Склонировать репазиторий.
+ 2. Сбандлить.
+```
+$ bundle install
+```
+ 3. Сделать миграцию БД.
+```
+$ rails db:migrate
+```
+ 4. Подключить к Heroku Redis.
+```
+$ heroku addons:add redistogo
+```
