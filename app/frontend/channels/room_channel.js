@@ -23,6 +23,7 @@ const createRoomChannel = roomId => {
 
 $(document).on("turbolinks:load", function () {
   let messages = $('#messages');
+  console.log('connect');
 
   if (messages.length > 0) {
     createRoomChannel(messages.data('room-id'))
