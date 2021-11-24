@@ -9,6 +9,7 @@ $(document).on("turbolinks:load", function () {
 
 consumer.subscriptions.create("OnlineChannel", {
     received(data) {
+      online_mes.empty();
       console.log('load');
       online_mes.append(data['users']);
     }
